@@ -64,7 +64,6 @@ namespace CRDLPROJET.Controllers
             ViewBag.clientID = new SelectList(db.clients, "clientID", "nomclient", facturation.clientID);
             return View(facturation);
         }
-
         // GET: facturations/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -80,7 +79,6 @@ namespace CRDLPROJET.Controllers
             ViewBag.clientID = new SelectList(db.clients, "clientID", "nomclient", facturation.clientID);
             return View(facturation);
         }
-
         // POST: facturations/Edit/5
         // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -122,7 +120,6 @@ namespace CRDLPROJET.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
