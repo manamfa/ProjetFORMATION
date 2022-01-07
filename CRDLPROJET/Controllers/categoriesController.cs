@@ -62,6 +62,8 @@ namespace CRDLPROJET.Controllers
             return View();
         }
 
+
+
         // POST: categories/Create
         // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -69,8 +71,6 @@ namespace CRDLPROJET.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "categorieID,nomcategorie,dateentree")] categorie categorie)
         {
-
-
             if (ModelState.IsValid)
             {
                 db.categories.Add(categorie);
