@@ -10,7 +10,6 @@
             });
         });
     });
-
 });
 
 //Getting unit price
