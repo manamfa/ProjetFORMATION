@@ -39,6 +39,7 @@ namespace CRDLPROJET
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
 
+
             bundles.Add(new StyleBundle("~/Assets/css").Include(
 
                  "~/Assets/css/bootstrap.css",
@@ -50,6 +51,7 @@ namespace CRDLPROJET
                 "~/Assets/css/styles.css"
 
                   ));
+
 
 
             bundles.Add(new ScriptBundle("~/Assets/js").Include(
