@@ -318,7 +318,6 @@ namespace CRDLPROJET.Controllers
             db.SaveChanges();
 
             TempData["msg"] = "<script>alert('La Supression Réussie avec success');</script>";
-
             return RedirectToAction("Index");
         }
         protected override void Dispose(bool disposing)
