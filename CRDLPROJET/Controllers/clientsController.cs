@@ -167,8 +167,6 @@ namespace CRDLPROJET.Controllers
                 {
                     rest = k - l;
 
-
-
                     produit produtData = db.produits.Where(u => u.produitID == produit.produitID).SingleOrDefault();
                     produtData.Quantite = rest;
 
