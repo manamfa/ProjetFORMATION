@@ -17,6 +17,7 @@ namespace CRDLPROJET.Controllers
         // GET: categories
         public ActionResult Index()
         {
+
             return View(db.categories.ToList());
         }
         public ActionResult Index1()
