@@ -135,6 +135,8 @@ namespace CRDLPROJET.Controllers
             return View(categorie);
         }
 
+
+
         // POST: categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
