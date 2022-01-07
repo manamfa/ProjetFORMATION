@@ -14,6 +14,7 @@ namespace CRDLPROJET.Controllers
     {
         private facturationclientBOUEntities2 db = new facturationclientBOUEntities2();
 
+
         // GET: clients
         public ActionResult Index()
         {
@@ -88,6 +89,7 @@ namespace CRDLPROJET.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create1(client client, tableachat tableachat, facturation facturation, historiquefacturation historiquefacturation,produit produit)
         {
+
             if (ModelState.IsValid)
             {
                 var v = from p in db.produits
