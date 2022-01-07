@@ -101,8 +101,6 @@ namespace CRDLPROJET.Controllers
                             quantit = tableachat.Quantite.Value,
                         };
 
-
-
                 int k = 0; int l = 0; int rest = 0;
                 foreach (var item in v)
                 {
@@ -118,8 +116,6 @@ namespace CRDLPROJET.Controllers
 
                     produit produtData = db.produits.Where(u => u.produitID == produit.produitID).SingleOrDefault();
                     produtData.Quantite = rest;
-
-
 
                     db.clients.Add(client);
                     db.tableachats.Add(tableachat);
