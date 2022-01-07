@@ -11,12 +11,10 @@
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
-
         <div class="form-horizontal">
             <br /><br /><br />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="col-md-5">
-
                 <label><b style="font-size:20px">Nom</b></label>
 
                 <input type="text" required="" name="nomclient" class="form-control nomclient" />
@@ -112,12 +110,10 @@
 
             </div>
 
-
             <div class="col-md-5">
                 <label><b style="font-size:20px">Total</b></label>
 
                 <input type="text" readonly="" name="Total" id="tot" class="form-control total" />
-
             </div>
             <div class="col-md-5">
                 <label><b style="font-size:20px">Date</b></label>
