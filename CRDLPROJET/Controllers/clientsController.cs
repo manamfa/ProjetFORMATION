@@ -172,8 +172,6 @@ namespace CRDLPROJET.Controllers
                     produit produtData = db.produits.Where(u => u.produitID == produit.produitID).SingleOrDefault();
                     produtData.Quantite = rest;
 
-
-
                     db.clients.Add(client);
                     db.tableachats.Add(tableachat);
                     db.facturations.Add(facturation);
