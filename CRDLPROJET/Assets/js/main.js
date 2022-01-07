@@ -5,12 +5,12 @@
         $('#categorieID').append("<option value=''></option>")
         $.get('/tableachats/getProducts', { id: id }, function (data) {
             $('#produitID').empty();
-
             $.each(data, function (index, row) {
                 $('#produitID').append("<option value='" + row.produitID + "'>" + row.nomproduit + "</option>")
             });
         });
     });
+
 });
 
 //Getting unit price
@@ -18,7 +18,6 @@ $(function () {
     $('#produitID').on('change', function () {
         var product_id = $(this).val();
         $('#produitID').append("<option value=''></option>")
-        /*alert(product_id);*/
 
         $.get('/tableachats/getUnitPrice', { product_id: product_id }, function (data) {
             $('.prixunitaire').val(data.prixdeventeunitaire);
@@ -31,15 +30,12 @@ $(function () {
     $('#Quantite').on('change', function () {
         var quantite = $(this).val();
         var prixunitaire = $('.prixunitaire').val();
-        // alert(quantite);
-        //alert(prixunitaire);
+       
         var Total = quantite * prixunitaire;
         //alert(total);
         $('#tot').val(Total);
     });
 });
-
-
 
 $(function () {
     $('#produitID').on('change', function () {
