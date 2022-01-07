@@ -20,13 +20,11 @@ namespace CRDLPROJET.Controllers
             var facturations = db.facturations.Include(f => f.client);
             return View(facturations.ToList());
         }
-
         public ActionResult Index1()
         {
             var facturations = db.facturations.Include(f => f.client);
             return View(facturations.ToList());
         }
-
         // GET: facturations/Details/5
         public ActionResult Details(int? id)
         {
