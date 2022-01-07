@@ -5,6 +5,7 @@ namespace CRDLPROJET
 {
     public class BundleConfig
     {
+        
         // Pour plus d’informations sur le Bundling, accédez à l’adresse http://go.microsoft.com/fwlink/?LinkId=254725 (en anglais)
         public static void RegisterBundles(BundleCollection bundles)
         {
@@ -24,6 +25,7 @@ namespace CRDLPROJET
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
