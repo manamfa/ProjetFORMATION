@@ -69,6 +69,8 @@ namespace CRDLPROJET.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "categorieID,nomcategorie,dateentree")] categorie categorie)
         {
+
+
             if (ModelState.IsValid)
             {
                 db.categories.Add(categorie);
