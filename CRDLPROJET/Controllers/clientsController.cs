@@ -69,6 +69,7 @@ namespace CRDLPROJET.Controllers
         }
         public ActionResult Create1()
         {
+
             var client = db.clients;
             ViewData["client"] = client.ToList();
 
