@@ -36,6 +36,10 @@ $(function () {
     });
 });
 
+
+
+
+
 $(function () {
     $('#produitID').on('change', function () {
         var product_id = $(this).val();
