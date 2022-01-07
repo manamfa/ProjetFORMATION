@@ -264,7 +264,6 @@ namespace CRDLPROJET.Controllers
             }
             return View(client);
         }
-
         // GET: clients/Delete/5
         public ActionResult Delete(int? id)
         {
