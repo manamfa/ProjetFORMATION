@@ -4,8 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace CRDLPROJET.Controllers
 {
+
     public class DashboardController : Controller
     {
         // GET: Dashboard
@@ -13,10 +15,10 @@ namespace CRDLPROJET.Controllers
         {
             return View();
         }
-
         public ActionResult Index1()
         {
             return View();
         }
+
     }
 }
