@@ -175,15 +175,6 @@ namespace CRDLPROJET.Controllers
         //    return View(data);
         //}
 
-        //public ActionResult Index1()
-        //{
-
-        //    string query = "select datehistofacturation,sum(Total) As 'somme_total' from historiquefacturation group by datehistofacturation";
-        //    IEnumerable<CRDLPROJET.Models.historiquefacturation> data = db.Database.SqlQuery<CRDLPROJET.Models.historiquefacturation>(query);
-
-        //    return View(data.ToList());
-        //}
-
         // GET: historiquefacturations/Details/5
         public ActionResult Details(int? id)
         {
