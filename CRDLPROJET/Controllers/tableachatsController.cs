@@ -33,6 +33,7 @@ namespace CRDLPROJET.Controllers
             var tableachats = db.tableachats.Include(t => t.client).Include(t => t.produit);
             return View(tableachats.ToList());
         }
+
         public JsonResult getProducts(int id)
         {
             db.Configuration.ProxyCreationEnabled = false;
