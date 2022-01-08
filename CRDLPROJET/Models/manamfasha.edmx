@@ -11,7 +11,7 @@
           </Key>
           <Property Name="categorieID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nomcategorie" Type="varchar" MaxLength="50" />
-          <Property Name="dateentree" Type="datetime" />
+          <Property Name="dateentree" Type="date" />
         </EntityType>
         <EntityType Name="client">
           <Key>
@@ -29,7 +29,7 @@
           </Key>
           <Property Name="facturationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="clientID" Type="int" />
-          <Property Name="datefacturation" Type="datetime" />
+          <Property Name="datefacturation" Type="date" />
         </EntityType>
         <EntityType Name="fournisseur">
           <Key>
@@ -40,7 +40,7 @@
           <Property Name="prenomfournisseur" Type="varchar" MaxLength="20" />
           <Property Name="tel" Type="varchar" MaxLength="50" />
           <Property Name="adresse" Type="varchar" MaxLength="50" />
-          <Property Name="datent" Type="datetime" />
+          <Property Name="datent" Type="date" />
         </EntityType>
         <EntityType Name="historiquefacturation">
           <Key>
@@ -53,7 +53,7 @@
           <Property Name="prixunitaire" Type="int" />
           <Property Name="Quantite" Type="int" />
           <Property Name="Total" Type="int" />
-          <Property Name="datehistofacturation" Type="datetime" />
+          <Property Name="datehistofacturation" Type="date" />
         </EntityType>
         <EntityType Name="historiqueprix">
           <Key>
@@ -62,7 +62,7 @@
           <Property Name="historiqueprixID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="produitID" Type="int" />
           <Property Name="prixdeventeunitaire" Type="int" />
-          <Property Name="datemodification" Type="datetime" />
+          <Property Name="datemodification" Type="date" />
         </EntityType>
         <EntityType Name="Payement">
           <Key>
@@ -84,7 +84,7 @@
           <Property Name="prixdeventeunitaire" Type="int" />
           <Property Name="Quantite" Type="int" />
           <Property Name="prixunitaireachat" Type="varchar" MaxLength="50" />
-          <Property Name="dateentree" Type="datetime" />
+          <Property Name="dateentree" Type="date" />
         </EntityType>
         <EntityType Name="profil">
           <Key>
@@ -112,7 +112,7 @@
           <Property Name="username" Type="varchar" MaxLength="50" />
           <Property Name="userpassword" Type="varchar" MaxLength="50" />
           <Property Name="useremail" Type="varchar" MaxLength="50" />
-          <Property Name="dateinsertion" Type="datetime" />
+          <Property Name="dateinsertion" Type="date" />
         </EntityType>
         <Association Name="FK__facturati__clien__1CF15040">
           <End Role="client" Type="Self.client" Multiplicity="0..1" />
@@ -442,7 +442,7 @@
           </Key>
           <Property Name="categorieID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nomcategorie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="dateentree" Type="DateTime" Precision="3" />
+          <Property Name="dateentree" Type="DateTime" Precision="0" />
           <NavigationProperty Name="produits" Relationship="Self.FK__produit__categor__36B12243" FromRole="categorie" ToRole="produit" />
         </EntityType>
         <EntityType Name="client">
@@ -467,7 +467,7 @@
           </Key>
           <Property Name="facturationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="clientID" Type="Int32" />
-          <Property Name="datefacturation" Type="DateTime" Precision="3" />
+          <Property Name="datefacturation" Type="DateTime" Precision="0" />
           <NavigationProperty Name="client" Relationship="Self.FK__facturati__clien__1CF15040" FromRole="facturation" ToRole="client" />
           <NavigationProperty Name="historiquefacturations" Relationship="Self.FK__historiqu__factu__3F466844" FromRole="facturation" ToRole="historiquefacturation" />
           <NavigationProperty Name="historiquefacturations1" Relationship="Self.FK__historiqu__factu__48CFD27E" FromRole="facturation" ToRole="historiquefacturation" />
@@ -483,7 +483,7 @@
           <Property Name="prenomfournisseur" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="adresse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="datent" Type="DateTime" Precision="3" />
+          <Property Name="datent" Type="DateTime" Precision="0" />
           <NavigationProperty Name="produits" Relationship="Self.FK__produit__fournis__37A5467C" FromRole="fournisseur" ToRole="produit" />
         </EntityType>
         <EntityType Name="historiquefacturation">
@@ -497,7 +497,7 @@
           <Property Name="prixunitaire" Type="Int32" />
           <Property Name="Quantite" Type="Int32" />
           <Property Name="Total" Type="Int32" />
-          <Property Name="datehistofacturation" Type="DateTime" Precision="3" />
+          <Property Name="datehistofacturation" Type="DateTime" Precision="0" />
           <NavigationProperty Name="client" Relationship="Self.FK__historiqu__clien__3E52440B" FromRole="historiquefacturation" ToRole="client" />
           <NavigationProperty Name="client1" Relationship="Self.FK__historiqu__clien__47DBAE45" FromRole="historiquefacturation" ToRole="client" />
           <NavigationProperty Name="client2" Relationship="Self.FK__historiqu__clien__4AB81AF0" FromRole="historiquefacturation" ToRole="client" />
@@ -518,7 +518,7 @@
           <Property Name="historiqueprixID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="produitID" Type="Int32" />
           <Property Name="prixdeventeunitaire" Type="Int32" />
-          <Property Name="datemodification" Type="DateTime" Precision="3" />
+          <Property Name="datemodification" Type="DateTime" Precision="0" />
           <NavigationProperty Name="produit" Relationship="Self.FK__historiqu__produ__3A81B327" FromRole="historiqueprix" ToRole="produit" />
         </EntityType>
         <EntityType Name="Payement">
@@ -541,7 +541,7 @@
           <Property Name="prixdeventeunitaire" Type="Int32" />
           <Property Name="Quantite" Type="Int32" />
           <Property Name="prixunitaireachat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="dateentree" Type="DateTime" Precision="3" />
+          <Property Name="dateentree" Type="DateTime" Precision="0" />
           <NavigationProperty Name="categorie" Relationship="Self.FK__produit__categor__36B12243" FromRole="produit" ToRole="categorie" />
           <NavigationProperty Name="fournisseur" Relationship="Self.FK__produit__fournis__37A5467C" FromRole="produit" ToRole="fournisseur" />
           <NavigationProperty Name="historiquefacturations" Relationship="Self.FK__historiqu__produ__3D5E1FD2" FromRole="produit" ToRole="historiquefacturation" />
@@ -580,7 +580,7 @@
           <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="userpassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="useremail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="dateinsertion" Type="DateTime" Precision="3" />
+          <Property Name="dateinsertion" Type="DateTime" Precision="0" />
           <NavigationProperty Name="profil" Relationship="Self.FK__users__profileID__29572725" FromRole="users" ToRole="profil" />
         </EntityType>
         <Association Name="FK__produit__categor__36B12243">
@@ -811,7 +811,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="facturationclientBOUEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="facturationclientBOUEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="categories" EntityType="Self.categorie" />
           <EntitySet Name="clients" EntityType="Self.client" />
           <EntitySet Name="facturations" EntityType="Self.facturation" />
@@ -905,7 +905,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="facturationclientBOUModelStoreContainer" CdmEntityContainer="facturationclientBOUEntities2">
+        <EntityContainerMapping StorageEntityContainer="facturationclientBOUModelStoreContainer" CdmEntityContainer="facturationclientBOUEntities3">
           <EntitySetMapping Name="categories">
             <EntityTypeMapping TypeName="facturationclientBOUModel.categorie">
               <MappingFragment StoreEntitySet="categorie">

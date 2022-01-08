@@ -13,7 +13,7 @@ namespace CRDLPROJET.Controllers
 {
     public class tableachatsController : Controller
     {
-        private facturationclientBOUEntities2 db = new facturationclientBOUEntities2();
+        private facturationclientBOUEntities3 db = new facturationclientBOUEntities3();
 
         // GET: tableachats
         List<tableachat> list = null;
