@@ -34,7 +34,7 @@
 @{
     string nom = null;
     string prenom = null;
-    string teleph = null;
+    string adresse = null;
 }
 
 
@@ -42,24 +42,25 @@
 {
     nom = item.client.nomclient;
     prenom = item.client.prenomclient;
-    teleph = item.client.numtel;
+    adresse = item.client.adresse;
 }
 
 @{
     string name = nom;
     string prename = prenom;
-    string telephone = teleph;
+    string adres = adresse;
 }
+<h3>A.Identification Du vendeur</h3>
 <h4 class="pull-left">Boutique:ADONAI</h4>
 <h4 class="pull-left">AVENUE:MAZA</h4>
 <h4 class="pull-left">Boutiquier:NIYONZIMA Pacifique</h4>
 <h4 class="pull-left">Tél +257 22226123/22226060</h4>
 
 <br />
-
+<h3>B.Identification Du Client</h3>
 <h3 class="pull-left"><strong>Nom & Prenom Client:@Html.DisplayFor(modelItem => name)&emsp;@Html.DisplayFor(modelItem => prename)</strong></h3>
-<h3 class="pull-left"><strong>Numero Du Télepnone:@telephone</strong><br /><br /><br /><br /><br /><br /></h3>
-<table class="table">
+<h3 class="pull-left"><strong>Adresse:@adres</strong><br /><br /><br /><br /><br /><br /></h3>
+<table class="table table-bordered">
 
     <tr>
         <th>
