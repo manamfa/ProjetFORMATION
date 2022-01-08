@@ -60,7 +60,6 @@ namespace CRDLPROJET.Controllers
             return View(model);
 
         }
-
         public ActionResult Index4()
         {
             List<Histofactmodel> model = (from d in db.historiquefacturations 
@@ -116,8 +115,6 @@ namespace CRDLPROJET.Controllers
          return View(model);
 
         }
-
-
          public ActionResult Index6()
         {
             List<Histofactmodel> model = (from d in db.historiquefacturations join p in db.produits
