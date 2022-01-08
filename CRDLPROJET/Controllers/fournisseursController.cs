@@ -110,7 +110,6 @@ namespace CRDLPROJET.Controllers
             }
             return View(fournisseur);
         }
-
         // POST: fournisseurs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
