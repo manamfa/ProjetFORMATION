@@ -54,14 +54,12 @@ namespace CRDLPROJET.Controllers
             }
             return View(historiqueprix);
         }
-
         // GET: historiqueprixes/Create
         public ActionResult Create()
         {
             ViewBag.produitID = new SelectList(db.produits, "produitID", "nomproduit");
             return View();
         }
-
         // POST: historiqueprixes/Create
         // Pour vous protéger des attaques par survalidation, activez les propriétés spécifiques auxquelles vous souhaitez vous lier. Pour 
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
