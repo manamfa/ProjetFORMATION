@@ -811,7 +811,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="facturationclientBOUEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="facturationclientBOUEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="categories" EntityType="Self.categorie" />
           <EntitySet Name="clients" EntityType="Self.client" />
           <EntitySet Name="facturations" EntityType="Self.facturation" />
@@ -905,7 +905,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="facturationclientBOUModelStoreContainer" CdmEntityContainer="facturationclientBOUEntities3">
+        <EntityContainerMapping StorageEntityContainer="facturationclientBOUModelStoreContainer" CdmEntityContainer="facturationclientBOUEntities4">
           <EntitySetMapping Name="categories">
             <EntityTypeMapping TypeName="facturationclientBOUModel.categorie">
               <MappingFragment StoreEntitySet="categorie">

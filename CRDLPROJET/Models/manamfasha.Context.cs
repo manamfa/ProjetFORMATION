@@ -13,10 +13,10 @@ namespace CRDLPROJET.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class facturationclientBOUEntities3 : DbContext
+    public partial class facturationclientBOUEntities4 : DbContext
     {
-        public facturationclientBOUEntities3()
-            : base("name=facturationclientBOUEntities3")
+        public facturationclientBOUEntities4()
+            : base("name=facturationclientBOUEntities4")
         {
         }
     
